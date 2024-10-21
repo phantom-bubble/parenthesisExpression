@@ -16,7 +16,7 @@ jobs:
   revert-failed-commit:
     needs: build
     runs-on: ubuntu-latest
-    if: needs.build.result == 'failure'
+    if: failure()
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
