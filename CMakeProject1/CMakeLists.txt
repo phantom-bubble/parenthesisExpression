@@ -13,7 +13,7 @@ project ("CMakeProject1")
 #把文件parentsisMatch.cpp编译为动态链接库
 #add_library (CMakeProject1 SHARED "parenthesisMatch.cpp")
 # 将源代码添加到此项目的可执行文件。
-add_executable (CMakeProject1 "parenthesisMatch.cpp" "CMakeProject1.h")
+add_executable (CMakeProject1 "parenthesisMatch.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 20)
