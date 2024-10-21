@@ -22,4 +22,4 @@ int findDeepestParenthesisIndex(std::string tmpstr);
 
 std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2);
 
-std::string EvaulateString(std::string tmpstr);
+std::string EvaluateString(std::string tmpstr);
