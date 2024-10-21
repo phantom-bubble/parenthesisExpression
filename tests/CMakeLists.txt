@@ -12,7 +12,7 @@ endif()
 project ("TestProject")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (TestProject "main.cpp")
+add_executable (TestProject "additionCut.cpp")
 target_link_libraries(TestProject parenthesisMatch)
 target_include_directories(TestProject PRIVATE
   ${PROJECT_SOURCE_DIR}/include
