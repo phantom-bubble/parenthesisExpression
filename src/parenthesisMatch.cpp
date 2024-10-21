@@ -59,7 +59,7 @@ std::string FindDeepestParenthesis(std::string tmpstr, bool option=1) {
 	throw "error!";
 }
 
-std::string addtionCut(std::string tmpstr) {
+std::string additionCut(std::string tmpstr) {
 	std::string outputstring1 = "";
 	std::string outputstring2 = "";
 	bool addFind = false;
@@ -131,6 +131,6 @@ std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string t
 }
 
 std::string EvaulateString(std::string tmpstr) {
-	return ReplaceDeepestParenthesisByString(tmpstr, addtionCut(FindDeepestParenthesis(tmpstr)));
+	return ReplaceDeepestParenthesisByString(tmpstr, additionCut(FindDeepestParenthesis(tmpstr)));
 
 }

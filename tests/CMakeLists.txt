@@ -9,26 +9,21 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("CMakeProject1")
-
-#把文件parentsisMatch.cpp编译为动态链接库
-add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
+project ("TestProject")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (CMakeProject1 "main.cpp")
-target_link_libraries(CMakeProject1 parenthesisMatch)
-target_include_directories(CMakeProject1 PRIVATE
-  ${PROJECT_SOURCE_DIR}/include
+add_executable (TestProject "additionCut.cpp")
+target_link_libraries(TestProject parenthesisMatch)
+target_include_directories(TestProject PRIVATE
+  ${PROJECT_SOURCE_DIR}/../include
 )
-
-add_subdirectory(tests)
 
 # 启用测试
 enable_testing()
-add_test(NAME MyTest COMMAND CMakeProject1)
+add_test(NAME Tests COMMAND TestProject)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 20)
+  set_property(TARGET TestProject PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
