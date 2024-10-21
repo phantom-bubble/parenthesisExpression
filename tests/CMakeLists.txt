@@ -13,8 +13,8 @@ project ("test")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (test "main.cpp")
-target_link_libraries(test_additionCut parenthesisMatch)
-target_include_directories(test_additionCut PRIVATE
+target_link_libraries(test parenthesisMatch)
+target_include_directories(test PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
