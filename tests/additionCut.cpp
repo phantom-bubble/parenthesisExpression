@@ -14,13 +14,13 @@ int main() {
       std::string var2;
       std::ostringstream os1(var1);
       os1 << i << std::flush;
-      var1 = os.str();
+      var1 = os1.str();
       std::ostringstream os2(var2);
       os << j << std::flush;
-      var2 = os.str();
+      var2 = os2.str();
       std::ostringstream ossum(sum);
       os << i + j << std::flush;
-      sum = os.str();
+      sum = ossum.str();
       ASSERT(sum, additionCut(var1 + "+" + var2))
     }
   }
