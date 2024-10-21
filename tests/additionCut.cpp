@@ -19,7 +19,7 @@ int main() {
       var2 = os.str();
       os << i + j << std::flush;
       sum = os.str();
-        ASSERT(sum, additionCut(var1 + "+" + var2))
+        ASSERT(sum, addtionCut(var1 + "+" + var2))
     }
   }
   return 0;
