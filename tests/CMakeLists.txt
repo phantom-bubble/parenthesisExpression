@@ -15,7 +15,7 @@ project ("TestProject")
 add_executable (TestProject "additionCut.cpp")
 target_link_libraries(TestProject parenthesisMatch)
 target_include_directories(TestProject PRIVATE
-  ${PROJECT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/../include
 )
 
 # 启用测试
