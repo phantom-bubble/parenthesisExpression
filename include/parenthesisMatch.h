@@ -12,7 +12,7 @@ bool parenthesisMatch(std::string tmpstr);
 
 std::string FindDeepestParenthesis(std::string tmpstr, bool option=1);
 
-std::string addtionCut(std::string tmpstr);
+std::string additionCut(std::string tmpstr);
 
 //删除空格
 std::string removeSpace(std::string tmpstr);
