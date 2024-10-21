@@ -141,6 +141,6 @@ int main() {
 	std::string test = "(1$我锟斤拷-jab2(*烫烫烫dhidoaozzzZzw)-;2(&iwh）中文括号（72))()";
 //	std::cout << findDeepestParenthesisIndex(test) << std::endl;
 //	std::cout << findDeepestParenthesisIndex("((1+2)*3)") << std::endl;
-	std::cout << EvaulatString("1+2+3+(4-5)*6") << std::endl;
+	std::cout << EvaulateString("1+2+3+(4-5)*6") << std::endl;
 	std::cout << ReplaceDeepestParenthesisByString("1+2*(3+4)", addtionCut(FindDeepestParenthesis("(1+2*(3+4))"))) << std::endl;
 }
