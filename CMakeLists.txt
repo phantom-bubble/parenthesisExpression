@@ -10,10 +10,14 @@ if (POLICY CMP0141)
 endif()
 
 project ("CMakeProject1")
+
 #把文件parentsisMatch.cpp编译为动态链接库
-#add_library (CMakeProject1 SHARED "parenthesisMatch.cpp")
+add_library (parenthesisMatch SHARED "parenthesisMatch.cpp")
+
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "parenthesisMatch.cpp")
+target_link_libraries(CMakeProject1 parenthesisMatch)
+
 # 启用测试
 enable_testing()
 add_test(NAME MyTest COMMAND CMakeProject1)
