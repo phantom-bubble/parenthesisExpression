@@ -21,7 +21,8 @@ target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
-add_subdirectory(tests)
+# add_subdirectory(tests)
+include(tests)
 
 # 启用测试
 enable_testing()
