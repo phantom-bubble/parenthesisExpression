@@ -56,6 +56,7 @@ std::string FindDeepestParenthesis(std::string tmpstr, bool option=1) {
 		if (tmpstr[i] == ')')
 			firstparenthesis--;
 	}
+	throw "error!";
 }
 
 std::string addtionCut(std::string tmpstr) {
