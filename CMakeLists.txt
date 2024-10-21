@@ -14,8 +14,7 @@ project ("CMakeProject1")
 #add_library (CMakeProject1 SHARED "parenthesisMatch.cpp")
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "parenthesisMatch.cpp")
-# 设置可执行文件的输出目录
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+add_test(NAME MyTest COMMAND CMakeProject1)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 20)
