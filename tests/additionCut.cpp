@@ -16,10 +16,10 @@ int main() {
       os1 << i << std::flush;
       var1 = os1.str();
       std::ostringstream os2(var2);
-      os << j << std::flush;
+      os2 << j << std::flush;
       var2 = os2.str();
       std::ostringstream ossum(sum);
-      os << i + j << std::flush;
+      ossum << i + j << std::flush;
       sum = ossum.str();
       ASSERT(sum, additionCut(var1 + "+" + var2))
     }
