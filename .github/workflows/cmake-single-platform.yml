@@ -14,8 +14,9 @@ env:
 
 jobs:
   revert-failed-commit:
+    needs: build
     runs-on: ubuntu-latest
-    if: failure()  # 仅在前面的工作流失败时运行
+    if: needs.build.result == 'failure'
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
