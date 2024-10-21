@@ -4,7 +4,7 @@
 #include<string>
 #include<sstream>
 
-#define ASSERT(var1, var2) if(var1 != var2) exit(-1);
+#define ASSERT(var1, var2) if(var1 != var2) { std::cout << var1 << var2 << "\n"; exit(-1); }
 
 int main() {
   for(int i = 0; i < 65536; ++i) {
