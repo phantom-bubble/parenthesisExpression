@@ -59,7 +59,7 @@ std::string FindDeepestParenthesis(std::string tmpstr, bool option=1) {
 	throw "error!";
 }
 
-std::string addtionCut(std::string tmpstr) {
+std::string additionCut(std::string tmpstr) {
 	std::string outputstring1 = "";
 	std::string outputstring2 = "";
 	bool addFind = false;
