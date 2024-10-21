@@ -15,8 +15,11 @@ project ("CMakeProject1")
 add_library (parenthesisMatch SHARED "parenthesisMatch.cpp")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (CMakeProject1 "parenthesisMatch.cpp")
+add_executable (CMakeProject1 "main.cpp")
 target_link_libraries(CMakeProject1 parenthesisMatch)
+target_include_directories(CMakeProject1 PRIVATE
+  ${PROJECT_SOURCE_DIR}/
+)
 
 # 启用测试
 enable_testing()
