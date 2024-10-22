@@ -8,8 +8,6 @@ int main() {
   ASSERT(removeSpace("         ") == "");
   ASSERT(removeSpace("a b c d") == "abcd");
   ASSERT(removeSpace(" a  b c  d ") == "abcd");
-  //for (int i = 0; i < 25; i++) {
-	 // std::string a="vda"
-  //}
+  
   return 0;
 }

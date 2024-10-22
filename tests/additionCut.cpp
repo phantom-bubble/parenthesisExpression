@@ -7,6 +7,7 @@ int main() {
   ASSERT("0" == additionCut("0+0"));
   ASSERT("1" == additionCut("0+1"));
   ASSERT("1" == additionCut("1+0"));
+  ASSERT("7777778" == additionCut("1+7777777"));
   ASSERT("65536" == additionCut("1+65535"));
   for(int i = 0; i < 2048; ++i) {
     for(int j = 0; j < 2048; ++j) {
