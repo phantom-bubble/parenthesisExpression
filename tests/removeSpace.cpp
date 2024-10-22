@@ -1,9 +1,10 @@
 #include <parenthesisMatch.h>
 #include <string>
-#include <assert.h>
+
+#define ASSERT(var) if(!(var)) exit(-1)
 
 int main() {
-  assert(removeSpace("1000 0000") == "10000000");
-  assert(removeSpace("         ") == "");
+  ASSERT(removeSpace("1000 0000") == "10000000");
+  ASSERT(removeSpace("         ") == "");
   return 0;
 }
