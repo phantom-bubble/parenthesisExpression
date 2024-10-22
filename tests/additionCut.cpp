@@ -1,6 +1,4 @@
 #include<parenthesisMatch.h>
-#include<iostream>
-#include<stdlib.h>
 #include<string>
 
 #define ASSERT(var) if(!(var)) return -1
