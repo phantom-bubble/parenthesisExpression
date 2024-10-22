@@ -7,5 +7,5 @@ int main() {
 	std::cout << findDeepestParenthesisIndex(test) << std::endl;
 //	std::cout << findDeepestParenthesisIndex("((1+2)*3)") << std::endl;
 	std::cout << evaluateString("1+2+3+(4-5)*6") << std::endl;
-	std::cout << replaceDeepestParenthesisByString("1+2*(3+4)", additionCut(findDeepestParenthesis("(1+2*(3+4))"))) << std::endl;
+//	std::cout << replaceDeepestParenthesisByString("1+2*(3+4)", additionCut(findDeepestParenthesis("(1+2*(3+4))"))) << std::endl;
 }
