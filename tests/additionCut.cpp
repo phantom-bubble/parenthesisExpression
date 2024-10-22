@@ -12,16 +12,13 @@ int main() {
       std::string sum = "";
       std::string var1 = "";
       std::string var2 = "";
-      std::ostringstream os{""};
-      os.clear();
-      os << i;
-      var1 = os.str("");
-      os.clear();
-      os << j;
-      var2 = os.str("");
-      os.clear();
-      os << i + j;
-      sum = os.str("");
+      std::stringstream ss;
+      ss << i;
+      ss >> var1;
+      ss << j;
+      ss >> var2;
+      ss << i + j;
+      ss >> sum;
       ASSERT(sum, additionCut(var1 + "+" + var2))
     }
   }
