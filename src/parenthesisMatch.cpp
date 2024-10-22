@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<sstream>
 /**
  * @brief  匹配括号
  * @param  tmpstr 待匹配的字符串
@@ -21,7 +20,7 @@ bool parenthesisMatch(std::string tmpstr) {
 	else return false;
 };
 
-std::string FindDeepestParenthesis(std::string tmpstr, bool option=1) {
+std::string findDeepestParenthesis(std::string tmpstr, bool option=1) {
 	if (!parenthesisMatch(tmpstr))
 	{
 		return "error!";
@@ -74,17 +73,9 @@ std::string additionCut(std::string tmpstr) {
 			outputstring2 += tmpstr[i];
 		}
 	}
-	int outputint1;
-	std::istringstream abc(outputstring1);
-	abc >> outputint1;
-	int outputint2;
-	std::istringstream abb(outputstring2);
-	abb >> outputint2;
-	int outputFinal = outputint1 + outputint2;
-	std::string outputstring;
-	std::ostringstream aaa =std::ostringstream{outputstring};
-	aaa << outputFinal;	
-	outputstring = aaa.str();
+	int outputint1 = std::stoi(outputstring1);
+	int outputint2 = std::stoi(outputstring2);
+	std::string outputstring = std::to_string(outputint1 + outputint2);
 	return outputstring;
 }
 
@@ -117,7 +108,7 @@ int findDeepestParenthesisIndex(std::string tmpstr) {
 	return index;
 }
 
-std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2) {
+std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2) {
 	int BeginIndex = findDeepestParenthesisIndex(tmpstr1);
 	int EndIndex = -1;
 	for (int i = BeginIndex; i < tmpstr1.size(); i++) {
@@ -130,7 +121,7 @@ std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string t
 	return tempstring;
 }
 
-std::string EvaluateString(std::string tmpstr) {
-	return ReplaceDeepestParenthesisByString(tmpstr, additionCut(FindDeepestParenthesis(tmpstr)));
+std::string evaluateString(std::string tmpstr) {
+	return replaceDeepestParenthesisByString(tmpstr, additionCut(findDeepestParenthesis(tmpstr)));
 
 }
