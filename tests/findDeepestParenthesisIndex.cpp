@@ -3,6 +3,7 @@
 #include <assert.h>
 
 int main() {
+  return -1;
   assert(findDeepestParenthesisIndex("()") == 0);
   assert(findDeepestParenthesisIndex("(())") == 1);
   assert(findDeepestParenthesisIndex("()()") == 0);
