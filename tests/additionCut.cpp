@@ -13,6 +13,7 @@ int main() {
       std::string var1;
       std::string var2;
       std::ostringstream os;
+      os.clear();
       os << i << std::flush;
       var1 = os.str();
       os.clear();
