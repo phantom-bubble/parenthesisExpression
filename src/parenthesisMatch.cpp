@@ -21,7 +21,7 @@ bool parenthesisMatch(std::string tmpstr) {
 	else return false;
 };
 
-std::string FindDeepestParenthesis(std::string tmpstr, bool option=1) {
+std::string findDeepestParenthesis(std::string tmpstr, bool option=1) {
 	if (!parenthesisMatch(tmpstr))
 	{
 		return "error!";
@@ -117,7 +117,7 @@ int findDeepestParenthesisIndex(std::string tmpstr) {
 	return index;
 }
 
-std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2) {
+std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2) {
 	int BeginIndex = findDeepestParenthesisIndex(tmpstr1);
 	int EndIndex = -1;
 	for (int i = BeginIndex; i < tmpstr1.size(); i++) {
@@ -130,7 +130,7 @@ std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string t
 	return tempstring;
 }
 
-std::string EvaluateString(std::string tmpstr) {
-	return ReplaceDeepestParenthesisByString(tmpstr, additionCut(FindDeepestParenthesis(tmpstr)));
+std::string evaluateString(std::string tmpstr) {
+	return replaceDeepestParenthesisByString(tmpstr, additionCut(findDeepestParenthesis(tmpstr)));
 
 }
