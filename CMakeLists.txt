@@ -17,7 +17,7 @@ add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
 find_library(AAA_STATIC_LIB NAMES parenthesisMatch_LIB PATHS ${PROJECT_SOURCE_DIR}/ NO_DEFAULT_PATH)
-target_link_libraries(CMakeProject1 parenthesisMatch_LIB)
+target_link_libraries(CMakeProject1 ${parenthesisMatch_LIB})
 target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
