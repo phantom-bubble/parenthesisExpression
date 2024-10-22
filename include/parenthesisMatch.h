@@ -10,7 +10,7 @@
  */
 bool parenthesisMatch(std::string tmpstr);
 
-std::string FindDeepestParenthesis(std::string tmpstr, bool option=1);
+std::string findDeepestParenthesis(std::string tmpstr, bool option=1);
 
 std::string additionCut(std::string tmpstr);
 
@@ -20,6 +20,6 @@ std::string removeSpace(std::string tmpstr);
 //找到最深层括号的索引
 int findDeepestParenthesisIndex(std::string tmpstr);
 
-std::string ReplaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2);
+std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2);
 
-std::string EvaluateString(std::string tmpstr);
+std::string evaluateString(std::string tmpstr);
