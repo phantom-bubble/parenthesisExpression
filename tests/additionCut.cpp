@@ -15,13 +15,13 @@ int main() {
       std::ostringstream os{""};
       os.clear();
       os << i;
-      var1 = os.str();
+      var1 = os.str("");
       os.clear();
       os << j;
-      var2 = os.str();
+      var2 = os.str("");
       os.clear();
       os << i + j;
-      sum = os.str();
+      sum = os.str("");
       ASSERT(sum, additionCut(var1 + "+" + var2))
     }
   }
