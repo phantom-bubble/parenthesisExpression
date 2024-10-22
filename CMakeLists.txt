@@ -26,11 +26,15 @@ target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
+if(TEST)
+
 add_subdirectory(tests)
 
 # 启用测试
 enable_testing()
-add_test(NAME MyTest COMMAND CMakeProject1)
+add_test(NAME MainTest COMMAND CMakeProject1)
+
+endif()
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 20)
