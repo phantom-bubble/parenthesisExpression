@@ -12,7 +12,7 @@ int main() {
       std::string sum;
       std::string var1;
       std::string var2;
-      std::ostringstream os();
+      std::ostringstream os;
       os << i << std::flush;
       var1 = os.str();
       os << j << std::flush;
