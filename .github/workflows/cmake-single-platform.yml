@@ -41,6 +41,8 @@ jobs:
         ctest -C ${{env.BUILD_TYPE}}
 
     - name: Show
+      working-directory: ${{github.workspace}}/build
+      run: |
         cat /home/runner/work/parentsis/parentsis/build/Testing/Temporary/LastTest.log
   build_on_windows:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
