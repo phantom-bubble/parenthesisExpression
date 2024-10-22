@@ -19,6 +19,9 @@ int main() {
       ss >> var2;
       ss << i + j;
       ss >> sum;
+      var1 = std::to_string(i);
+      var2 = std::to_string(j);
+      sum = std::to_string(i + j);
       ASSERT(sum, additionCut(var1 + "+" + var2))
     }
   }
