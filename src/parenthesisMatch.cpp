@@ -82,7 +82,7 @@ std::string additionCut(std::string tmpstr) {
 	abb >> outputint2;
 	int outputFinal = outputint1 + outputint2;
 	std::string outputstring;
-	std::ostringstream aaa =std::ostringstream{outputstring};
+	std::ostringstream aaa;
 	aaa << outputFinal;	
 	outputstring = aaa.str();
 	return outputstring;
