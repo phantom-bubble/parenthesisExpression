@@ -30,7 +30,8 @@ add_test(NAME additionCut_test COMMAND additionCut_test)
 add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET TestProject PROPERTY CXX_STANDARD 20)
+  set_property(TARGET additionCut_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET parenthesisMatch_test PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
