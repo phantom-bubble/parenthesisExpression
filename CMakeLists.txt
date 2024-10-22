@@ -13,7 +13,11 @@ project ("CMakeProject1")
 
 #把文件parentsisMatch.cpp编译为动态链接库
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+if(WIN32)
+add_library (parenthesisMatch STATIC "src/parenthesisMatch.cpp")
+else()
 add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
+endif()
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
