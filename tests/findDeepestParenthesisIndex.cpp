@@ -1,9 +1,9 @@
 #include <parenthesisMatch.h>
 #include <string>
-#include <assert.h>
+
+#define assert(var) if(!(var)) exit(-1)
 
 int main() {
-  return -1;
   assert(findDeepestParenthesisIndex("()") == 0);
   assert(findDeepestParenthesisIndex("(())") == 1);
   assert(findDeepestParenthesisIndex("()()") == 0);
