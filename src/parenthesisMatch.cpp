@@ -1,6 +1,5 @@
 #include<iostream>
 #include<string>
-#include<sstream>
 /**
  * @brief  匹配括号
  * @param  tmpstr 待匹配的字符串
@@ -74,17 +73,9 @@ std::string additionCut(std::string tmpstr) {
 			outputstring2 += tmpstr[i];
 		}
 	}
-	int outputint1;
-	std::istringstream abc(outputstring1);
-	abc >> outputint1;
-	int outputint2;
-	std::istringstream abb(outputstring2);
-	abb >> outputint2;
-	int outputFinal = outputint1 + outputint2;
-	std::string outputstring;
-	std::ostringstream aaa;
-	aaa << outputFinal;	
-	outputstring = aaa.str();
+	int outputint1 = std::stoi(outputstring1);
+	int outputint2 = std::stoi(outputstring2);
+	outputstring = std::to_string(outputint1 + outputint2);
 	return outputstring;
 }
 
