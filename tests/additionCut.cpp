@@ -2,7 +2,6 @@
 #include<iostream>
 #include<stdlib.h>
 #include<string>
-#include<sstream>
 
 #define ASSERT(var1, var2) if(var1 != var2) { std::cerr << var1 << var2 << "\n"; exit(-1); }
 
@@ -12,13 +11,6 @@ int main() {
       std::string sum = "";
       std::string var1 = "";
       std::string var2 = "";
-      std::stringstream ss;
-      ss << i;
-      ss >> var1;
-      ss << j;
-      ss >> var2;
-      ss << i + j;
-      ss >> sum;
       var1 = std::to_string(i);
       var2 = std::to_string(j);
       sum = std::to_string(i + j);
