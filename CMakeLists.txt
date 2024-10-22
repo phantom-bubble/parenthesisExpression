@@ -12,7 +12,7 @@ endif()
 project ("CMakeProject1")
 
 #把文件parentsisMatch.cpp编译为动态链接库
-add_library (parenthesisMatch SHARE "src/parenthesisMatch.cpp")
+add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
