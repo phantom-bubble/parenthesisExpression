@@ -24,14 +24,22 @@ target_include_directories(parenthesisMatch_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
+add_executable (findDeepestParenthesis_test "findDeepestParenthesis.cpp")
+target_link_libraries(findDeepestParenthesis_test parenthesisMatch)
+target_include_directories(findDeepestParenthesis_test PRIVATE
+  ${PROJECT_SOURCE_DIR}/../include
+)
+
 # 启用测试
 enable_testing()
 add_test(NAME additionCut_test COMMAND additionCut_test)
 add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
+add_test(NAME findDeepestParenthesis_test COMMAND parenthesisMatch_test)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET additionCut_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET parenthesisMatch_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET findDeepestParenthesis_test PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
