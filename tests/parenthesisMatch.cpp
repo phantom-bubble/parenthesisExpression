@@ -1,8 +1,7 @@
 #include <parenthesisMatch.h>
 #include <string>
-#include <stdlib.h>
 
-#define ASSERT(var) if(!(var)) exit(-1)
+#define ASSERT(var) if(!(var)) return -1
 
 int main() {
   ASSERT(parenthesisMatch("()") == true);

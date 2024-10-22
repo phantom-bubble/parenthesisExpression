@@ -4,7 +4,6 @@
 #define ASSERT(var) if(!(var)) return -1
 
 int main() {
-  ASSERT(removeSpace("1000 0000") == "10000000");
-  ASSERT(removeSpace("         ") == "");
+  ASSERT(evaluateString("1-(2+3)") == "1-5");
   return 0;
 }
