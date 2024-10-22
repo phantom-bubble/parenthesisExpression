@@ -15,8 +15,10 @@ int main() {
       std::ostringstream os;
       os << i << std::flush;
       var1 = os.str();
+      os.clear();
       os << j << std::flush;
       var2 = os.str();
+      os.clear();
       os << i + j << std::flush;
       sum = os.str();
       ASSERT(sum, additionCut(var1 + "+" + var2))
