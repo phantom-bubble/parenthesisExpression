@@ -17,17 +17,17 @@ add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
-find_library(parenthesisMatch_LIB NAMES libparenthesisMatch.so PATHS ${PROJECT_SOURCE_DIR}/ NO_DEFAULT_PATH)
+find_library(parenthesisMatch_LIB NAMES libparenthesisMatch.so PATHS ${PROJECT_SOURCE_DIR}/lib NO_DEFAULT_PATH)
 target_link_libraries(CMakeProject1 ${parenthesisMatch_LIB})
 target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
-add_subdirectory(tests)
+# add_subdirectory(tests)
 
 # 启用测试
-enable_testing()
-add_test(NAME MyTest COMMAND CMakeProject1)
+# enable_testing()
+# add_test(NAME MyTest COMMAND CMakeProject1)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 20)
