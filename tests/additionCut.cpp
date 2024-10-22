@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<string>
 
-#define ASSERT(var) if(!(var)) exit(-1)
+#define ASSERT(var) if(!(var)) return -1
 
 int main() {
   ASSERT("0" == additionCut("0+0"));
