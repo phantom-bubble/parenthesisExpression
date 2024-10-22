@@ -40,6 +40,15 @@ jobs:
       run: |
         ctest -C ${{env.BUILD_TYPE}} && cat /home/runner/work/parentsis/parentsis/build/Testing/Temporary/LastTest.log
 
+  test_on_linux:
+    needs: build_on_linux
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test
+      run: |
+        ctest -C ${{env.BUILD_TYPE}} && cat /home/runner/work/parentsis/parentsis/build/Testing/Temporary/LastTest.log
+
   show_on_linux:
     # The CMake configure and build commands are platform agnostic and should work equally well on Windows or Mac.
     # You can convert this to a matrix build if you need cross-platform coverage.
