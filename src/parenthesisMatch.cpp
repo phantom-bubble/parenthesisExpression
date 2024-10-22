@@ -75,7 +75,7 @@ std::string additionCut(std::string tmpstr) {
 	}
 	int outputint1 = std::stoi(outputstring1);
 	int outputint2 = std::stoi(outputstring2);
-	outputstring = std::to_string(outputint1 + outputint2);
+	std::string outputstring = std::to_string(outputint1 + outputint2);
 	return outputstring;
 }
 
