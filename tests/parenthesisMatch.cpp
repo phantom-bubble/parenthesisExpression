@@ -2,7 +2,7 @@
 #include <string>
 #include <stdlib.h>
 
-#ASSERT(var) if(!(var)) exit(-1)
+#define ASSERT(var) if(!(var)) exit(-1)
 
 int main() {
   ASSERT(parenthesisMatch("()") == true);
