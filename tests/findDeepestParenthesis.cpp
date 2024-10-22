@@ -16,7 +16,7 @@ int main() {
 	  std::string a = "zzzzzzzZz";
 	  std::string b = a;
 	  for (int j = 0; j < i; j++) {
-		  b = "(" + b + ")");
+		  b = "(" + b + ")";
 		  ASSERT(findDeepestParenthesis(b) ==a);
 	  }
   }
