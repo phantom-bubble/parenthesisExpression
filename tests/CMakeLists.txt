@@ -42,6 +42,12 @@ target_include_directories(findDeepestParenthesisIndex_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
+add_executable (evaluateString_test "evaluateString.cpp")
+target_link_libraries(evaluateString_test parenthesisMatch)
+target_include_directories(evaluateString_test PRIVATE
+  ${PROJECT_SOURCE_DIR}/../include
+)
+
 # 启用测试
 enable_testing()
 add_test(NAME additionCut_test COMMAND additionCut_test)
@@ -49,6 +55,7 @@ add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
 add_test(NAME findDeepestParenthesis_test COMMAND findDeepestParenthesis_test)
 add_test(NAME removeSpace_test COMMAND removeSpace_test)
 add_test(NAME findDeepestParenthesisIndex_test COMMAND findDeepestParenthesisIndex_test)
+add_test(NAME evaluateString_test COMMAND evaluateString_test)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET additionCut_test PROPERTY CXX_STANDARD 20)
@@ -56,6 +63,7 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET findDeepestParenthesis_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET removeSpace_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET findDeepestParenthesisIndex_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET evaluateString_test PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: 如有需要，请添加测试并安装目标。
