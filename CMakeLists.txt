@@ -12,14 +12,12 @@ endif()
 project ("CMakeProject1")
 
 #把文件parentsisMatch.cpp编译为动态链接库
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 add_library (parenthesisMatch SHARED "src/parenthesisMatch.cpp")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
-find_library(parenthesisMatch_LIB NAMES libparenthesisMatch.so PATHS ${PROJECT_SOURCE_DIR}/ NO_DEFAULT_PATH)
-if(NOT parenthesisMatch_LIB)
-find_library(parenthesisMatch_LIB NAMES parenthesisMatch.dll PATHS ${PROJECT_SOURCE_DIR}/ NO_DEFAULT_PATH)
-endif()
+find_library(parenthesisMatch_LIB NAMES parenthesisMatch PATHS ${PROJECT_SOURCE_DIR}/ NO_DEFAULT_PATH)
 target_link_libraries(CMakeProject1 ${parenthesisMatch_LIB})
 target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
