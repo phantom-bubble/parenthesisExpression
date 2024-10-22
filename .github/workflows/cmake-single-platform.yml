@@ -47,6 +47,7 @@ jobs:
     needs: build_on_linux
     runs-on: ubuntu-latest
 
+    if: failure() && needs.build_on_linux.result == 'failure'
     steps:
     - name: Show
       working-directory: ${{github.workspace}}/build
