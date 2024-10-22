@@ -46,9 +46,9 @@ target_include_directories(findDeepestParenthesisIndex_test PRIVATE
 enable_testing()
 add_test(NAME additionCut_test COMMAND additionCut_test)
 add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
-add_test(NAME findDeepestParenthesis_test COMMAND parenthesisMatch_test)
-add_test(NAME removeSpace_test COMMAND parenthesisMatch_test)
-add_test(NAME findDeepestParenthesisIndex_test COMMAND parenthesisMatch_test)
+add_test(NAME findDeepestParenthesis_test COMMAND findDeepestParenthesis_test)
+add_test(NAME removeSpace_test COMMAND removeSpace_test)
+add_test(NAME findDeepestParenthesisIndex_test COMMAND findDeepestParenthesisIndex_test)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET additionCut_test PROPERTY CXX_STANDARD 20)
