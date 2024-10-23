@@ -25,6 +25,8 @@ std::string findDeepestParenthesis(std::string tmpstr, bool option=1);
  */
 std::string additionCut(std::string tmpstr);
 
+std::string subtraction(std::string subtraction_expression);
+
 std::string subtractionCut(std::string tmpstr);
 
 //删除空格
