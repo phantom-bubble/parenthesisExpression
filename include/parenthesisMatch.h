@@ -14,6 +14,8 @@ std::string findDeepestParenthesis(std::string tmpstr, bool option=1);
 
 std::string additionCut(std::string tmpstr);
 
+std::string subtraction(std::string subtraction_expression);
+
 //删除空格
 std::string removeSpace(std::string tmpstr);
 
