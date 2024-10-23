@@ -27,8 +27,6 @@ std::string additionCut(std::string tmpstr);
 
 std::string subtraction(std::string subtraction_expression);
 
-std::string subtractionCut(std::string tmpstr);
-
 //删除空格
 std::string removeSpace(std::string tmpstr);
 
