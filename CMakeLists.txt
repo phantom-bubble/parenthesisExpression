@@ -21,6 +21,9 @@ add_library (parenthesisMatch STATIC ${SOURCES})
 else()
 add_library (parenthesisMatch SHARED ${SOURCES})
 endif()
+target_include_directories(parenthesisMatch PRIVATE
+  ${PROJECT_SOURCE_DIR}/include
+)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
