@@ -8,7 +8,7 @@ int main() {
   ASSERT("1" == addition("0 + 1"));
   ASSERT("1" == addition("1 + 0"));
   ASSERT("7777778" == addition("1 + 7777777"));
-  ASSERT("65536" == additionC("1 + 65535"));
+  ASSERT("65536" == addition("1 + 65535"));
   for(int i = 0; i < 2048; ++i) {
     for(int j = 0; j < 2048; ++j) {
       std::string sum = "";
