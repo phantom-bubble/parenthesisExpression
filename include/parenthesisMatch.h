@@ -23,7 +23,7 @@ std::string findDeepestParenthesis(std::string tmpstr, bool option=1);
  * @param  tmpstr 待计算的字符串
  * @return string 计算结果（字符串）
  */
-std::string additionCut(std::string tmpstr);
+std::string addition(std::string addition_expression);
 
 std::string subtraction(std::string subtraction_expression);
 
