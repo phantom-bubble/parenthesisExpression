@@ -3,20 +3,9 @@
 std::string addition(std::string addition_expression) {
 	std::string outputstring1 = "";
 	std::string outputstring2 = "";
-	bool addFind = false;
-	for (int i = 0; i < tmpstr.size(); i++) {
-		if (tmpstr[i] != '+' && addFind == false) {
-			outputstring1 += tmpstr[i];
-		}
-		if (tmpstr[i] == '+') {
-			addFind = true;
-		}
-		if (tmpstr[i] != '+' && addFind == true) {
-			outputstring2 += tmpstr[i];
-		}
-	}
-	int outputint1 = std::stoi(outputstring1);
-	int outputint2 = std::stoi(outputstring2);
-	std::string outputstring = std::to_string(outputint1 + outputint2);
-	return outputstring;
+	auto addition_operator_index = addition_expression.find(" + ");
+	std::string first_num = addition_expression.substr(0, addition_operator_index);
+	std::string second_num = addition_expression.substr(addition_operator_index + 3);
+	auto result = std::to_string(std::stoi(first_num) + std::stoi(second_num));
+	return result;
 }
