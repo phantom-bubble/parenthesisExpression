@@ -21,7 +21,7 @@ bool parenthesisMatch(std::string tmpstr) {
 	else return false;
 };
 
-std::string findDeepestParenthesis(std::string tmpstr, bool option=1) {
+std::string findDeepestParenthesis(std::string tmpstr, bool option) {
 	if (!parenthesisMatch(tmpstr))
 	{
 		return "error!";
