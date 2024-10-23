@@ -1,3 +1,5 @@
+#include <string>
+
 std::string subtraction(std::string subtraction_expression) {
 	std::string outputstring1 = "";
 	std::string outputstring2 = "";
