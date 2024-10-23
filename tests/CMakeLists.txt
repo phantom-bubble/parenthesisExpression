@@ -12,9 +12,9 @@ endif()
 project ("TestProject")
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (additionCut_test "additionCut.cpp")
-target_link_libraries(additionCut_test parenthesisMatch)
-target_include_directories(additionCut_test PRIVATE
+add_executable (addition_test "addition.cpp")
+target_link_libraries(addition_test parenthesisMatch)
+target_include_directories(addition_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
@@ -50,7 +50,7 @@ target_include_directories(evaluateString_test PRIVATE
 
 # 启用测试
 enable_testing()
-add_test(NAME additionCut_test COMMAND additionCut_test)
+add_test(NAME addition_test COMMAND addition_test)
 add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
 add_test(NAME findDeepestParenthesis_test COMMAND findDeepestParenthesis_test)
 add_test(NAME removeSpace_test COMMAND removeSpace_test)
@@ -58,7 +58,7 @@ add_test(NAME findDeepestParenthesisIndex_test COMMAND findDeepestParenthesisInd
 add_test(NAME evaluateString_test COMMAND evaluateString_test)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET additionCut_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET addition_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET parenthesisMatch_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET findDeepestParenthesis_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET removeSpace_test PROPERTY CXX_STANDARD 20)
