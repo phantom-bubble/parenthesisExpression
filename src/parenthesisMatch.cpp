@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include <parenthesisMatch.h>
 /**
  * @brief  匹配括号
  * @param  tmpstr 待匹配的字符串
@@ -20,7 +21,7 @@ bool parenthesisMatch(std::string tmpstr) {
 	else return false;
 };
 
-std::string findDeepestParenthesis(std::string tmpstr, bool option=1) {
+std::string findDeepestParenthesis(std::string tmpstr, bool option) {
 	if (!parenthesisMatch(tmpstr))
 	{
 		return "error!";
@@ -56,48 +57,6 @@ std::string findDeepestParenthesis(std::string tmpstr, bool option=1) {
 			firstparenthesis--;
 	}
 	throw "error!";
-}
-
-std::string additionCut(std::string tmpstr) {
-	std::string outputstring1 = "";
-	std::string outputstring2 = "";
-	bool addFind = false;
-	for (int i = 0; i < tmpstr.size(); i++) {
-		if (tmpstr[i] != '+' && addFind == false) {
-			outputstring1 += tmpstr[i];
-		}
-		if (tmpstr[i] == '+') {
-			addFind = true;
-		}
-		if (tmpstr[i] != '+' && addFind == true) {
-			outputstring2 += tmpstr[i];
-		}
-	}
-	int outputint1 = std::stoi(outputstring1);
-	int outputint2 = std::stoi(outputstring2);
-	std::string outputstring = std::to_string(outputint1 + outputint2);
-	return outputstring;
-}
-
-std::string subtractionCut(std::string tmpstr) {
-	std::string outputstring1 = "";
-	std::string outputstring2 = "";
-	bool subFind = false;
-	for (int i = 0; i < tmpstr.size(); i++) {
-		if (tmpstr[i] != '-' && subFind == false) {
-			outputstring1 += tmpstr[i];
-		}
-		if (tmpstr[i] == '-') {
-			subFind = true;
-		}
-		if (tmpstr[i] != '-' && subFind == true) {
-			outputstring2 += tmpstr[i];
-		}
-	}
-	int outputint1 = std::stoi(outputstring1);
-	int outputint2 = std::stoi(outputstring2);
-	std::string outputstring = std::to_string(outputint1 - outputint2);
-	return outputstring;
 }
 
 //删除空格
@@ -143,6 +102,6 @@ std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string t
 }
 
 std::string evaluateString(std::string tmpstr) {
-	return replaceDeepestParenthesisByString(tmpstr, additionCut(findDeepestParenthesis(tmpstr)));
+	return replaceDeepestParenthesisByString(tmpstr, addition(findDeepestParenthesis(tmpstr)));
 
 }
