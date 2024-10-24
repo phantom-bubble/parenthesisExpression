@@ -21,6 +21,7 @@ add_library (parenthesisMatch SHARED ${SOURCES})
 else()
 add_library (parenthesisMatch SHARED ${SOURCES})
 endif()
+target_compile_definitions(parenthesisMatch PRIVATE __API)
 target_include_directories(parenthesisMatch PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
