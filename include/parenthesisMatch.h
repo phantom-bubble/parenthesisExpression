@@ -5,12 +5,12 @@
 
 #ifdef WIN32
 #ifdef __API
-#define __EXPORT __declspec(dllexport)
+#define __EXPORT __declspec(dllexport) extern
 #else
-#define __EXPORT __declspec(dllimport)
+#define __EXPORT __declspec(dllimport) extern
 #endif
 #else
-#define __EXPORT
+#define __EXPORT extern
 #endif
 
 /**
