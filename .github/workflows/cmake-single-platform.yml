@@ -174,6 +174,7 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: |
         dir
+        copy Release\*.dll tests\Release\
         ctest -C ${{env.BUILD_TYPE}}
         
   build_on_macos:
