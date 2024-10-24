@@ -7,7 +7,7 @@
 #ifdef __API
 #define __EXPORT __declspec(dllexport) extern
 #else
-#define __EXPORT __declspec(dllimport) extern
+#define __EXPORT __declspec(dllexport) extern
 #endif
 #else
 #define __EXPORT extern
