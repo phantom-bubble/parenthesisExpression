@@ -105,6 +105,12 @@ jobs:
       run: |
         cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: libparenthesisMatch.so
+        path: ${{github.workspace}}/lib/libparenthesisMatch.so
+
   test_on_linux:
     needs: build_on_linux
     runs-on: ubuntu-latest
@@ -150,6 +156,18 @@ jobs:
       run: |
         cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
+    - name: Upload Artifact dll
+      uses: actions/upload-artifact@v4
+      with:
+        name: parenthesisMatch.dll
+        path: ${{github.workspace}}/build/Release/parenthesisMatch.dll
+
+    - name: Upload Artifact lib
+      uses: actions/upload-artifact@v4
+      with:
+        name: parenthesisMatch.lib
+        path: ${{github.workspace}}/build/Release/parenthesisMatch.lib
+
   test_on_windows:
     needs: build_on_windows
     runs-on: windows-latest
@@ -167,6 +185,11 @@ jobs:
       # Build your program with the given configuration
       run: |
         cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+    - name: Distribute DLL
+      working-directory: ${{github.workspace}}/build
+      run: |
+        copy Release\*.dll tests\Release\
         
     - name: Test
       working-directory: ${{github.workspace}}/build
@@ -194,6 +217,12 @@ jobs:
       # Build your program with the given configuration
       run: |
         cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: libparenthesisMatch.dylib
+        path: ${{github.workspace}}/lib/libparenthesisMatch.dylib
 
   test_on_macos:
     needs: build_on_macos

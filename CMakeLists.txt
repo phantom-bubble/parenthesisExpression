@@ -16,11 +16,7 @@ project ("CMakeProject1")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # 获取src文件夹下所有的.cpp文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SOURCES)
-if(WIN32)
-add_library (parenthesisMatch STATIC ${SOURCES})
-else()
 add_library (parenthesisMatch SHARED ${SOURCES})
-endif()
 target_include_directories(parenthesisMatch PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
