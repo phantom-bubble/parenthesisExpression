@@ -4,7 +4,11 @@
 #include<sstream>
 
 #ifdef WIN32
+#ifdef __API
 #define __EXPORT __declspec(dllexport)
+#else
+#define __EXPORT __declspec(dllimport)
+#endif
 #else
 #define __EXPORT
 #endif
