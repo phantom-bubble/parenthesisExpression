@@ -3,12 +3,18 @@
 #include<string>
 #include<sstream>
 
+#ifdef WIN32
+#define __EXPORT __declspec(dllexport)
+#else
+#define __EXPORT
+#endif
+
 /**
  * @brief  匹配括号
  * @param  tmpstr 待匹配的字符串
  * @return bool   匹配成功返回true，否则返回false
  */
-__declspec(dllexport) bool parenthesisMatch(std::string tmpstr);
+__EXPORT bool parenthesisMatch(std::string tmpstr);
 
 /**
  * @brief 寻找最深层括号
