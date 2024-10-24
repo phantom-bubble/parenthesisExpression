@@ -109,7 +109,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: lib/parenthesis.so
-        path: ${{github.workspace}}/build/lib/parenthesis.so
+        path: ${{github.workspace}}/lib/parenthesis.so
 
   test_on_linux:
     needs: build_on_linux
