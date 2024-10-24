@@ -1,4 +1,5 @@
 #include <string>
+#include <parenthesisExpression.h>
 
 std::string subtraction(std::string subtraction_expression) {
   auto subtraction_operator_index = subtraction_expression.find('-');
