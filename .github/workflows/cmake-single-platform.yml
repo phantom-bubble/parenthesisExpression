@@ -168,7 +168,7 @@ jobs:
       run: |
         cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
-    - name: Configure DLL
+    - name: Distribute DLL
       working-directory: ${{github.workspace}}/build
       run: |
         copy Release\*.dll tests\Release\
