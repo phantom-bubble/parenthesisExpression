@@ -8,7 +8,7 @@
  * @param  tmpstr 待匹配的字符串
  * @return bool   匹配成功返回true，否则返回false
  */
-bool parenthesisMatch(std::string tmpstr);
+__declspec(dllexport) bool parenthesisMatch(std::string tmpstr);
 
 /**
  * @brief 寻找最深层括号
