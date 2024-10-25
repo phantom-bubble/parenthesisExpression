@@ -20,11 +20,6 @@ add_library (parenthesisMatch SHARED ${SOURCES})
 target_include_directories(parenthesisMatch PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
-set_target_properties(parenthesisMatch PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
-    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
-)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (CMakeProject1 "main.cpp")
