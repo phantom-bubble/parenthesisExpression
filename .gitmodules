@@ -1,0 +1,3 @@
+[submodule "etc/numberCalculation"]
+	path = etc/numberCalculation
+	url = https://github.com/zzzzzzzZz-chow/numberCalculation.git
