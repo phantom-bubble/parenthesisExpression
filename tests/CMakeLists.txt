@@ -13,37 +13,37 @@ project ("TestProject")
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (addition_test "addition.cpp")
-target_link_libraries(addition_test parenthesisMatch)
+target_link_libraries(addition_test parenthesisExpression)
 target_include_directories(addition_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
 add_executable (parenthesisMatch_test "parenthesisMatch.cpp")
-target_link_libraries(parenthesisMatch_test parenthesisMatch)
+target_link_libraries(parenthesisMatch_test parenthesisExpression)
 target_include_directories(parenthesisMatch_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
 add_executable (findDeepestParenthesis_test "findDeepestParenthesis.cpp")
-target_link_libraries(findDeepestParenthesis_test parenthesisMatch)
+target_link_libraries(findDeepestParenthesis_test parenthesisExpression)
 target_include_directories(findDeepestParenthesis_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
 add_executable (removeSpace_test "removeSpace.cpp")
-target_link_libraries(removeSpace_test parenthesisMatch)
+target_link_libraries(removeSpace_test parenthesisExpression)
 target_include_directories(removeSpace_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
 add_executable (findDeepestParenthesisIndex_test "findDeepestParenthesisIndex.cpp")
-target_link_libraries(findDeepestParenthesisIndex_test parenthesisMatch)
+target_link_libraries(findDeepestParenthesisIndex_test parenthesisExpression)
 target_include_directories(findDeepestParenthesisIndex_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
 add_executable (evaluateString_test "evaluateString.cpp")
-target_link_libraries(evaluateString_test parenthesisMatch)
+target_link_libraries(evaluateString_test parenthesisExpression)
 target_include_directories(evaluateString_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
