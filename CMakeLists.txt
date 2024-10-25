@@ -16,13 +16,13 @@ project ("CMakeProject1")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 # 获取src文件夹下所有的.cpp文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SOURCES)
-add_library (parenthesisExpression SHARED ${SOURCES})
+add_library (parenthesisExpression SHARED ${SOURCES} "src/multiplication.cpp")
 target_include_directories(parenthesisExpression PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (CMakeProject1 "main.cpp")
+add_executable (CMakeProject1 "main.cpp" "src/multiplication.cpp")
 target_link_libraries(CMakeProject1 parenthesisExpression)
 target_include_directories(CMakeProject1 PRIVATE
   ${PROJECT_SOURCE_DIR}/include
