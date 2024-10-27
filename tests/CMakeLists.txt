@@ -24,6 +24,18 @@ target_include_directories(subtraction_test PRIVATE
   ${PROJECT_SOURCE_DIR}/../include
 )
 
+add_executable (multiplication_test "multiplication.cpp")
+target_link_libraries(multiplication_test parenthesisExpression)
+target_include_directories(multiplication_test PRIVATE
+  ${PROJECT_SOURCE_DIR}/../include
+)
+
+add_executable (division_test "division.cpp")
+target_link_libraries(division_test parenthesisExpression)
+target_include_directories(division_test PRIVATE
+  ${PROJECT_SOURCE_DIR}/../include
+)
+
 add_executable (parenthesisMatch_test "parenthesisMatch.cpp")
 target_link_libraries(parenthesisMatch_test parenthesisExpression)
 target_include_directories(parenthesisMatch_test PRIVATE
@@ -58,6 +70,8 @@ target_include_directories(evaluateString_test PRIVATE
 enable_testing()
 add_test(NAME addition_test COMMAND addition_test)
 add_test(NAME subtraction_test COMMAND subtraction_test)
+add_test(NAME multiplication_test COMMAND multiplication_test)
+add_test(NAME division_test COMMAND division_test)
 add_test(NAME parenthesisMatch_test COMMAND parenthesisMatch_test)
 add_test(NAME findDeepestParenthesis_test COMMAND findDeepestParenthesis_test)
 add_test(NAME removeSpace_test COMMAND removeSpace_test)
@@ -67,6 +81,8 @@ add_test(NAME evaluateString_test COMMAND evaluateString_test)
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET addition_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET subtraction_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET multiplication_test PROPERTY CXX_STANDARD 20)
+  set_property(TARGET division_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET parenthesisMatch_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET findDeepestParenthesis_test PROPERTY CXX_STANDARD 20)
   set_property(TARGET removeSpace_test PROPERTY CXX_STANDARD 20)
