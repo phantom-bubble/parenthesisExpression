@@ -7,7 +7,7 @@ int main() {
     ASSERT("0" == subtraction("0 - 0"));
     ASSERT("-1" == subtraction("0 - 1"));
     ASSERT("1" == subtraction("1 - 0"));
-    ASSERT("7777776" == subtraction("7777777-1"));
+    ASSERT("7777776" == subtraction("7777777 - 1"));
     ASSERT("-1" == subtraction("1 - 2"));
     ASSERT("-65536" == subtraction("-1 - 65535"));
     for (int i = 2048; i > 0; --i) {
