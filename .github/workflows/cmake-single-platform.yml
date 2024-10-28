@@ -109,7 +109,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: libparenthesisMatch.so
-        path: ${{github.workspace}}/lib/libparenthesisMatch.so
+        path: ${{github.workspace}}/lib/libparenthesisExpression.so
 
   test_on_linux:
     needs: build_on_linux
@@ -160,13 +160,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: parenthesisMatch.dll
-        path: ${{github.workspace}}/build/Release/parenthesisMatch.dll
+        path: ${{github.workspace}}/build/Release/parenthesisExpression.dll
 
     - name: Upload Artifact lib
       uses: actions/upload-artifact@v4
       with:
         name: parenthesisMatch.lib
-        path: ${{github.workspace}}/build/Release/parenthesisMatch.lib
+        path: ${{github.workspace}}/build/Release/parenthesisExpression.lib
 
   test_on_windows:
     needs: build_on_windows
@@ -222,7 +222,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: libparenthesisMatch.dylib
-        path: ${{github.workspace}}/lib/libparenthesisMatch.dylib
+        path: ${{github.workspace}}/lib/libparenthesisExpression.dylib
 
   test_on_macos:
     needs: build_on_macos
