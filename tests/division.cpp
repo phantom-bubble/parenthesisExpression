@@ -6,7 +6,7 @@
 
 int main() {
 	ASSERT("2" == division("4 / 2"));
-	for(int i = 0; i < 1000000; ++i) {
+	for(int i = 0; i < 10000000; ++i) {
 		int var1 = rand();
 		int var2 = rand();
 		int result = var1 / var2;
