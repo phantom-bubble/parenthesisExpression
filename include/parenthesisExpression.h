@@ -61,3 +61,10 @@ __EXPORT int findDeepestParenthesisIndex(std::string tmpstr);
 __EXPORT std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string tmpstr2);
 
 __EXPORT std::string evaluateString(std::string tmpstr);
+
+/**
+ * @brief 判断字符串是否为加法表达式
+ * @param addition_expression 待判断的字符串	
+ * @return bool 判断结果
+ */
+__EXPORT bool isAdditionExpression(std::string addition_expression);
