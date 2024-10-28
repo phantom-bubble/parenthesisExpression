@@ -1,6 +1,6 @@
 #include <parenthesisExpression.h>
 #include <string>
-#include <rand.h>
+#include <stdlib.h>
 
 #define ASSERT(var) if(!(var)) return -1
 
