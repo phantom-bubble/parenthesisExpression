@@ -101,7 +101,4 @@ std::string replaceDeepestParenthesisByString(std::string tmpstr1, std::string t
 	return tempstring;
 }
 
-std::string evaluateString(std::string tmpstr) {
-	return replaceDeepestParenthesisByString(tmpstr, addition(findDeepestParenthesis(tmpstr)));
 
-}
