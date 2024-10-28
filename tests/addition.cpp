@@ -25,5 +25,6 @@ int main() {
     int var1 = rand();
     int var2 = rand();
     ASSERT(std::to_string(var1 + var2) == addition(std::to_string(var1) + " + " + std::to_string(var2)));
+  }
   return 0;
 }
