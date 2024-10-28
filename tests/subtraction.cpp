@@ -10,6 +10,7 @@ int main() {
     ASSERT("7777776" == subtraction("7777777 - 1"));
     ASSERT("-1" == subtraction("1 - 2"));
     ASSERT("-65536" == subtraction("-1 - 65535"));
+    ASSERT("-10086" == subtraction("-0 - +10086"));
     for (int i = 2048; i > 0; --i) {
         for (int j = 0; j < 2048; ++j) {
             std::string sum = "";
