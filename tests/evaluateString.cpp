@@ -5,6 +5,7 @@
 
 int main() {
   ASSERT(evaluateString("1 - (2 + 3)") == "1 - 5");
+  ASSERT(evaluateString("(5 - 3)") == "2");
 //  ASSERT(evaluateString("(4 + 5) - (2 + 3)") == "9 - 5");
   return 0;
 }
