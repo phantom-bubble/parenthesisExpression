@@ -7,7 +7,7 @@ std::string evaluateString(std::string expression) {
       expression = addition(expression);
     else if(isSubtractionExpression(expression))
       expression = subtraction(expression);
-    return expression
+    return expression;
   }
   std::string sub_expression = findDeepestParenthesis(expression);
   if(isAdditionExpression(sub_expression))
