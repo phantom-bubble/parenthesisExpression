@@ -9,5 +9,6 @@ int main() {
   ASSERT(evaluateString("(4 + 5) - (2 + 3)") == "4");
   ASSERT(evaluateString("((15 + 200) - (0 - 50))") == "265");
   ASSERT(evaluateString("(1 - 123) + 124") == "2");
+  ASSERT(evaluateString("124 + (1 - 123)") == "2");
   return 0;
 }
