@@ -81,4 +81,4 @@ __EXPORT bool isSubtractionExpression(std::string subtraction_expression);
  * @param subtraction_expression 待判断的字符串	
  * @return bool 判断结果
  */
-__EXPORT bool containParenthesisExpression(std::string expression)
+__EXPORT bool containParenthesisExpression(std::string expression);
