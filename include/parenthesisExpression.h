@@ -77,6 +77,20 @@ __EXPORT bool isAdditionExpression(std::string addition_expression);
 __EXPORT bool isSubtractionExpression(std::string subtraction_expression);
 
 /**
+ * @brief 判断字符串是否为乘法表达式
+ * @param multiplication_expression 待判断的字符串	
+ * @return bool 判断结果
+ */
+__EXPORT bool isMultiplicationExpression(std::string multiplication_expression);
+
+/**
+ * @brief 判断字符串是否为除法表达式
+ * @param division_expression 待判断的字符串	
+ * @return bool 判断结果
+ */
+__EXPORT bool isDivisionExpression(std::string division_expression);
+
+/**
  * @brief 判断字符串是否包含括号表达式
  * @param subtraction_expression 待判断的字符串	
  * @return bool 判断结果

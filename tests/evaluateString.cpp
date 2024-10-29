@@ -11,5 +11,7 @@ int main() {
   ASSERT(evaluateString("(1 - 123) + 124") == "2");
   ASSERT(evaluateString("124 + (1 - 123)") == "2");
   ASSERT(evaluateString("(0 + 1) + 2") == "3");
+  ASSERT(evaluateString("(1 + (2 * 3)) - (4 / 2)") == "5");
+  ASSERT(evaluateString("(1 * 2) * (3 * 4)") == "24");
   return 0;
 }
