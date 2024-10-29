@@ -68,3 +68,10 @@ __EXPORT std::string evaluateString(std::string tmpstr);
  * @return bool 判断结果
  */
 __EXPORT bool isAdditionExpression(std::string addition_expression);
+
+/**
+ * @brief 判断字符串是否为减法表达式
+ * @param subtraction_expression 待判断的字符串	
+ * @return bool 判断结果
+ */
+__EXPORT bool isSubtractionExpression(std::string subtraction_expression);
